@@ -44,6 +44,7 @@ body{
 .main-info-index{
   grid-column: 3 / span 3;
   position: absolute;
+  right: 10px;
   transform: translateY(-50%);
   font-size: 120px;
   -webkit-text-stroke-width: 1px;
@@ -82,8 +83,10 @@ body{
 
 .main-detail-button img{
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #22242A;
   right: 0;
 }
 
