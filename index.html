@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MMM</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Yuhjoon Yoon"/>
+  <meta name="copyright" content="Yuhjoon Yoon"/>
+  <meta name="Viewport" content="width=device-width">
+  <style type="text/css">
+    @font-face { 
+      font-family: "GBW";
+      font-style: normal;
+      src:url("font/Graphik-Black-Web.eot");
+      src:url("font/Graphik-Black-Web.eot?#iefix") format('embedded-opentype'), 
+      url("font/Graphik-Black-Web.woff") format('woff'),
+      url("font/Graphik-Black-Web.ttf") format('truetype');
+      src:local(※), url("font/Graphik-Black-Web.woff") format('woff'); 
+    }
+  </style>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/flickity.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="main-contents">
+      <div class="main-contents-genre"></div>
+      <div class="main-contents-poster"><iframe id="ifrm" src="" width="100%" height="100%" frameborder="0" scrolling="no" onmousewheel="" allowtransparency="true"></iframe></div>
+      <div class="main-contents-info">
+        <h1 class="main-info-index"></h1>
+        <div class="main-info-date"></div>
+        <h2 class="main-info-title"></h2>
+        <div class="main-info-person"></div>
+        <div class="main-detail-button"><img src="img/ic_more.png"></div>
+      </div>
+    </div>
+    <div class="main-about"><img src="img/logo_mmm.svg"></div>
+    <div class="main-carousel">
+      <div class="carousel-cell"><div class="carousel-poster"><img src=""></div></div>
+      <div class="carousel-cell"><div class="carousel-poster"><img src=""></div></div>
+      <div class="carousel-cell"><div class="carousel-poster"><img src=""></div></div>
+      <div class="carousel-cell"><div class="carousel-poster"><img src=""></div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/film_info.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    $(document).ready( function() {
+        var posterWidth = $( '.main-contents-poster' ).width();
+        $('.carousel-poster').css('width', posterWidth);
+    });
+  </script>
+</body>
+</html>

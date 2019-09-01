@@ -1,0 +1,18 @@
+:root {
+    /* Colors */
+    --background: #ffffff;
+    --primary-color: rgba(0, 0, 0, .97);
+    --secondary-color: rgba(0, 0, 0, .64);
+    --tertiary-color: rgba(0, 0, 0, .40);
+    --quarternary: rgba(0, 0, 0, .12);
+    --primary-color-reverse: #ffffff;
+    --header-bg: rgba(255, 255, 255, .95);
+
+    /* Values */
+    --base-side-margin: 20px;
+    --base-column-margin: 18px;
+    --abdz-curve: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    --content-height: calc(100vh - var(--content-top-margin) - var(--footer-height));
+    /* Grid */
+    --grid-columns: repeat(5, 1fr);
+}

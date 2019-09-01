@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MMM</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Yuhjoon Yoon"/>
+  <meta name="copyright" content="Yuhjoon Yoon"/>
+  <meta name="Viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <style type="text/css">
+    .poster-container{
+      width: 100vw;
+      height: 100vh;
+      /*background-color: #000;*/
+    }
+  </style>
+</head>
+<body>
+  <div class="poster-container"></div>  
+  <script src="js/lottie.js"></script>
+  <script type="text/javascript">
+    const posterSecond = lottie.loadAnimation({
+      container: document.getElementById('poster-container'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'poster_02_data.json'
+    });
+  </script>
+</body>
+</html>

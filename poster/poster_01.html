@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MMM</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Yuhjoon Yoon"/>
+  <meta name="copyright" content="Yuhjoon Yoon"/>
+  <meta name="Viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <style type="text/css">
+
+    .wrapper{
+      height: 100vh;
+      transform-origin: 50% 50%;
+      transform: rotateZ(45deg) scale(1.5);
+      /*background-color: #000;*/
+    }
+
+    .parent{
+      width: 1px;
+      height: 100vh;
+      float: left;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .child{
+      position: absolute;
+      top: 29%;
+    }
+
+    .child img{
+      width: 100vw;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="poster-container"><div class="poster"><ol class="wrapper"></ol></div></div>  
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/anime.min.js"></script>
+  <script type="text/javascript">
+    var posterWidth = $(".poster").width();
+    var listCount = 0;
+    var addedList = '<li class="parent"><div class="child"><img src="img/poster_01/no.png"></div></li>'
+    anime.easings['myCustomEasingName'] = function(t){ return Math.pow(Math.sin(t*3),3);}
+
+    // poster animation
+    function posterFirst(i, yy,tt){
+        anime({
+          targets: 'li:nth-child('+i+') .child img',
+          translateY: yy,
+          duration: tt,
+          loop: true,
+          elasticity: 5000,
+          easing: 'myCustomEasingName',
+        });
+    }
+
+    // making poster
+    for (i = 0; i < posterWidth; i++) { 
+      $( ".wrapper" ).append(addedList);
+      $(".child").eq(i).css('left',listCount--);
+      posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000)); 
+    }
+
+    // click event
+    $('body').click(function(){
+      
+      for (i = 0; i < posterWidth; i++) { 
+        posterFirst(i, anime.random(-10, 10), 1000);     
+      }
+      setTimeout(function(){
+        for (i = 0; i < posterWidth; i++) { 
+          posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));     
+        }
+      },1000)
+    });
+  
+  </script>
+</body>
+</html>
