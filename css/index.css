@@ -17,7 +17,7 @@ body{
 .main-contents-genre{
   grid-column: 4 / span 1;
   text-align: right;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.2;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -90,7 +90,7 @@ body{
 .main-about{
   position: fixed;
   bottom: 40px;
-  right: 20px;
+  right: 30px;
 }
 
 .main-carousel{
