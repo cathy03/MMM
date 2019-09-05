@@ -1,8 +1,8 @@
 var film_info = [
-  { genre: 'ACTION<br>SCI-FI',
-    date: '2011',
-    title: 'RISE OF THE PLANET OF THE APES',
-    person: 'Rupert Wyatt<br>Andy Serkis',
+  { genre: 'Fantasy<br>Romance',
+    date: '1993',
+    title: 'Groundhog Day',
+    person: 'Bill Murray<br>Andie MacDowell',
     poster: 'poster/poster_01.html'
   },
 
