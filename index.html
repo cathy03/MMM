@@ -76,6 +76,9 @@
     });
 
     // open html 
+    $('.revealer__layer').one("webkitAnimationend", function(){
+      window.location.href = 'about.html';
+    });
     $('.revealer__layer').one("animationend", function(){
       window.location.href = 'about.html';
     });

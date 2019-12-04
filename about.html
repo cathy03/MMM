@@ -54,6 +54,9 @@
     });
 
     // open html 
+    $('.revealer__layer').one("webkitAnimationend", function(){
+      window.location.href = 'about.html';
+    });
     $('.about-contents-closed').one("animationend", function(){
       window.history.back();
     });
