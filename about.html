@@ -54,8 +54,8 @@
     });
 
     // open html 
-    $('.revealer__layer').one("webkitAnimationEnd", function(){
-      window.location.href = 'about.html';
+    $('.about-contents-closed').one("webkitAnimationEnd", function(){
+      window.history.back();
     });
     $('.about-contents-closed').one("animationend", function(){
       window.history.back();
