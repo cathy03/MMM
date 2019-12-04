@@ -73,12 +73,14 @@
       $('.revealer__layer').addClass('detail');
       $('.revealer__layer.detail').css('bottom', 170 - x.top);
       $('.revealer__layer').addClass('revealer--animate');
-    });
 
-    // open html 
+      // open html 
     $('.revealer__layer').one("webkitAnimationEnd", function(){
       window.location.href = 'about.html';
     });
+    });
+
+    
 
   </script>
 </body>

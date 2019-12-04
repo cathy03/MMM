@@ -51,12 +51,14 @@
     $('.about-closed-button').click(function(){
       $('.about-contents-closed').css('opacity','1');
       $('.about-contents-closed').addClass('revealer--animate');
-    });
 
-    // open html 
+      // open html 
     $('.about-contents-closed').one("webkitAnimationEnd", function(){
       window.history.back();
     });
+    });
+
+
 
 
   </script>
