@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MMM</title>
+   <meta charset="utf-8">
+  <meta name="author" content="Yuhjoon Yoon"/>
+  <meta name="copyright" content="Yuhjoon Yoon"/>
+  <meta name="Viewport" content="width=device-width">
+  <style type="text/css">
+    @font-face { 
+      font-family: "GBW";
+      font-style: normal;
+      src:url("font/Graphik-Black-Web.eot");
+      src:url("font/Graphik-Black-Web.eot?#iefix") format('embedded-opentype'), 
+      url("font/Graphik-Black-Web.woff") format('woff'),
+      url("font/Graphik-Black-Web.ttf") format('truetype');
+      src:local(※), url("font/Graphik-Black-Web.woff") format('woff'); 
+    }
+  </style>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/flickity.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+  <div class="about-contents-closed"></div>
+    <div class="about-contents">
+      <div class="about-closed-button">CLOSE</div>
+       <div class="about-contents-info">
+        <div class="about-contents-desc desc-text">This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.</div>
+    </div>
+    <div class="about-logo"><img src="img/logo_mmm_full.svg"></div>
+  </div>  
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+
+    function listAnimation(){
+      $('.about-contents-desc').each(function (i) {
+        var $workList = $(this);
+        setTimeout(function(){
+          $workList.css('opacity', '1');
+          $workList.css('transform', 'translate3d(0, 0, 0');
+          $workList.css('transition', 'all 1s ease');
+        }, i*300);
+      });
+    }
+
+    $(document).ready(listAnimation);
+
+    $('.about-closed-button').click(function(){
+      $('.about-contents-closed').css('opacity','1');
+      $('.about-contents-closed').addClass('revealer--animate');
+    });
+
+    // open html 
+    $('.about-contents-closed').one("animationend", function(){
+      window.history.back();
+    });
+
+  </script>
+</body>
+</html>

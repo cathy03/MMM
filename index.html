@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+  <div class="revealer">
+    <div class="revealer__layer"></div>
+  </div>
   <div class="main-container">
     <div class="main-contents">
       <div class="main-contents-genre"></div>
@@ -43,6 +46,7 @@
       <div class="carousel-cell"><div class="carousel-poster"><img src=""></div></div>
     </div>
   </div>
+  
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/film_info.js"></script>
@@ -53,6 +57,27 @@
         $('.carousel-poster').css('width', posterWidth);
         $('.carousel-poster').css('height', posterWidth*1.6);
         $('.main-contents-poster').css('height', posterWidth*1.6);
+    });
+
+
+    $('.main-about').click(function(){
+      $('.revealer').css('opacity','1');
+      $('.revealer__layer').addClass('about');
+      $('.revealer__layer').addClass('revealer--animate');
+    });
+
+    $('.main-detail-button').click(function(){
+      var x = $(".main-detail-button").position();
+
+      $('.revealer').css('opacity','1');
+      $('.revealer__layer').addClass('detail');
+      $('.revealer__layer.detail').css('bottom', 170 - x.top);
+      $('.revealer__layer').addClass('revealer--animate');
+    });
+
+    // open html 
+    $('.revealer__layer').one("animationend", function(){
+      window.location.href = 'about.html';
     });
   </script>
 </body>
