@@ -76,7 +76,7 @@
     });
 
     // open html 
-    $('.revealer__layer').bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+    $('.revealer__layer').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
       window.location.href = 'about.html';
     });
 

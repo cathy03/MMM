@@ -54,8 +54,8 @@
     });
 
     // open html 
-    $('.about-contents-closed').bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
-      window.history.back();
+    $('.about-contents-closed').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+      window.history.go(-1);
     });
 
 
